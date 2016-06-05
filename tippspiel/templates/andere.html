@@ -9,7 +9,7 @@
 <script type="application/javascript">
   $(document).ready(function() {
     {% for u in users %}
-    $("#i{{ u.id }}").click( function() { $.get("/toggle_friend/{{ u.id }}/");
+    $("#i{{ u.id }}").click( function() { $.post("/toggle_friend/{{ u.id }}/");
         var src = ($(this).attr('src') === "{% static 'png/star.png' %}")
             ? "{% static 'png/star_gray.png' %}"
             : "{% static 'png/star.png' %}";

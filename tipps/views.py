@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth import authenticate, login, logout
 from django.conf import settings
 from django.template import RequestContext
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Userdata, Spiel, Tipp, Runde
 from misc.tools import rtr
@@ -81,6 +82,7 @@ def anderek(request, sortby=None):
     return stats(request, sortby)
 
 
+@login_required
 def stats(request, sortby=None, limit=None):
     ud = Userdata.objects.get(user=request.user)
     t = datetime.datetime.now() + datetime.timedelta(hours=1)
@@ -120,6 +122,7 @@ def stats(request, sortby=None, limit=None):
 
 
 @login_required
+@csrf_exempt
 def toggle_friend(request, id):
     ud = Userdata.objects.get(user=request.user)
     fr = Userdata.objects.get(id=id)
@@ -131,6 +134,7 @@ def toggle_friend(request, id):
     return HttpResponse({}, content_type="application/json")
 
 
+@login_required
 def stat_teams(request):
     teams = []
     for team, teamname in settings.TEAM_CHOICES:
