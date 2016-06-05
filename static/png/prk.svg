@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720">
+<rect fill="#034da2" width="1440" height="720"/>
+<rect fill="#fff" y="120" width="1440" height="480"/>
+<rect fill="#ed1d25" y="140" width="1440" height="440"/>    
+<circle fill="#fff" cx="480" cy="360" r="160"/>
+<path fill="#ed1d25" transform="matrix(155,0,0,155,480,360)" d="M 0,-1 L 0.22451399,-0.30901699 L 0.95105652,-0.30901699 L 0.36327126,0.11803399 L 0.58778525,0.80901699 L 0,0.38196601 L -0.58778525,0.80901699 L -0.36327126,0.11803399 L -0.95105652,-0.30901699 L -0.22451399,-0.30901699 L 0,-1 z"/>
+</svg>

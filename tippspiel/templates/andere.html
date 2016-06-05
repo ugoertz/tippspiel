@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Alle Tips" %}{% endblock %}
+{% block ueberschrift %}{% trans "Tabelle/Tipps aller Mitspieler" %}{% endblock %}
+
+{% block js %}
+<script type="application/javascript">
+  $(document).ready(function() {
+    {% for u in users %}
+    $("#i{{ u.id }}").click( function() { $.get("/toggle_friend/{{ u.id }}/");
+        var src = ($(this).attr('src') === "{% static 'png/star.png' %}")
+            ? "{% static 'png/star_gray.png' %}"
+            : "{% static 'png/star.png' %}";
+        $(this).attr('src', src);
+    } );
+    {% endfor %}
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+<div style="margin-bottom:60px;">
+{% if limit %}
+<a style="padding-right:10px;" href="/statskomplett/">{% trans "Komplette Liste mit allen Spielen" %}</a>
+<a style="padding-right:10px;" href="/stats/byteam/">{% trans "Sortiere nach Team" %}</a>
+<a style="padding-right:10px;" href="/stats/">{% trans "Sortiere nach Punkten" %}</a>
+{% else %}
+<a style="padding-right:10px;" href="/stats/">{% trans "Kurze Liste (mit den 10 letzten Spielen)" %}</a>
+<a style="padding-right:10px;" href="/statskomplett/byteam/">{% trans "Sortiere nach Team" %}</a>
+<a style="padding-right:10px;" href="/statskomplett/">{% trans "Sortiere nach Punkten" %}</a>
+{% endif %}
+</div>
+
+<div>
+<table cellspacing="2" cellpadding="3" style="border-collapse: separate; border-spacing: 0 2px; width:950px; overflow:auto">
+    {% if slist %}
+    <tr cellspacing="2"><td colspan="5"></td>{% for s in slist %}<td style="font-size:80%" align="center">{{ s.datum|date:"j.n." }}</td>{% endfor %}</tr>
+    <tr cellspacing="2"><td colspan="5"></td>{% for s in slist %}<td nowrap><img alt="" border="1" style="border:1px solid black;" src="{% get_static_prefix %}png/{{ s.mannschaft1.code }}.png"> {{ s.mannschaft1.code|upper }} -</td>{% endfor %}</tr>
+    <tr cellspacing="2"><td colspan="5"></td>{% for s in slist %}<td nowrap><img alt="" border="1" style="border:1px solid black;" src="{% get_static_prefix %}png/{{ s.mannschaft2.code }}.png"> {{ s.mannschaft2.code|upper }}</td>{% endfor %}</tr>
+    <tr cellspacing="2"><td style="font-size:80%">{% trans "Platz" %}</td><td style="font-size:80%">{% trans "Name" %}</td><td style="font-size:80%;">{% trans "Team" %}</td><td style="font-size:80%">{% trans "Punkte" %}</td><td bgcolor="#FFFFFF" width="10"></td>{% for s in slist %}<td nowrap align="center">{% if s.tore1|default_if_none:"-1"|add:"1" %}<b>{{ s.tore1 }} : {{ s.tore2 }}</b>{% endif %}</td>{% endfor %}</tr>
+    {% else %}
+    <tr><td style="font-size:80%">{% trans "Platz" %}</td><td style="font-size:80%">{% trans "Name" %}</td><td style="font-size:80%;">{% trans "Team" %}</td><td style="font-size:80%">{% trans "Punkte" %}</td></tr>
+    {% endif %}
+
+    {% for u in users %}
+    <tr bgcolor="{% ifequal ud.user.username u.user.username %}#AAFFAA{% else %}{% cycle #EEEEEE,#FFFFFF %}{% endifequal %}">
+        <td>{% if u.punkte_verschieden %}{% if zeige_plaetze %}{{ u.platz }}{% else %}{{ forloop.counter }}{% endif %}.{% endif %}</td>
+        <td nowrap>{% if ud.user.username == u.user.username %}<img style="margin-right:10px;" src="{% static 'png/star.png' %}">{% else %}{% if u in ud.friends.all %}<img id="i{{ u.id }}" style="cursor:pointer; margin-right:10px;" src="{% static 'png/star.png' %}">{% else %}<img id="i{{ u.id }}" style="margin-right:10px; cursor:pointer;" src="{% static 'png/star_gray.png' %}">{% endif %}{% endif %}
+        {{ u.user.get_full_name }}</td><td>{{ u.get_team_display }}</td><td align="center">{{ u.punkte }}</td><td bgcolor="#FFFFFF" width="10"></td>
+        {% for t in u.li %}<td align="center" bgcolor="#{{ t.1 }}">{{ t.0 }}</td>{% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+</div>
+<div style="margin-top:30px; margin-bottom:30px; color:gray;"><img src="{% static 'png/star.png' %}"><img src="{% static 'png/star_gray.png' %}"> {% trans "Klicke die Sterne, um Freunde zu markieren. Wenn Du Freunde markiert hast und die Seite neu lädst, erscheinst Du mit allen Freunden oben in der Liste." %}
+{% endblock %}

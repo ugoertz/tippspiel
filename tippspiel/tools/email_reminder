@@ -1,0 +1,5 @@
+#! /bin/bash
+export DJANGO_SETTINGS_MODULE='tippspiel.settings'
+source /home/ug/.virtualenvs/tippspiel/bin/activate
+python /home/ug/devel/tippspiel/tippspiel/tools/email_reminder.py $*
+

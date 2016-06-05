@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-04 21:29+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: settings.py:35
+msgid "Deutsch"
+msgstr "German"
+
+#: settings.py:36
+msgid "English"
+msgstr ""
+
+#: allg/views.py:30
+msgid "Benutzer unbekannt"
+msgstr "User unknown"
+
+#: allg/views.py:40
+msgid "Du hast eine Email mit einem neuen Passwort bekommen."
+msgstr "We sent you an email with a new password."
+
+#: allg/views.py:47
+msgid "Login fehlgeschlagen."
+msgstr "Login failed."
+
+#: allg/views.py:49
+msgid "Bitte Benutzernamen und Passwort eingeben."
+msgstr "Please enter user name and password."
+
+#: allg/views.py:57
+msgid "Du bist abgemeldet worden."
+msgstr "You have been logged out."
+
+#: allg/views.py:99
+msgid "Anmeldung erfolgreich."
+msgstr "Registration successful."
+
+#: allg/views.py:102
+msgid "Die Angaben sind nicht vollstaendig."
+msgstr "The data you entered is not complete."
+
+#: templates/andere.html:4
+msgid "Alle Tips"
+msgstr "All bets"
+
+#: templates/andere.html:5 templates/base.html:20
+msgid "Tabelle/Tipps aller Mitspieler"
+msgstr "Table, bets of other players"
+
+#: templates/andere.html:10
+msgid "Komplette Liste mit allen Spielen"
+msgstr "Complete list with all matches"
+
+#: templates/andere.html:11 templates/andere.html.py:15
+msgid "Sortiere nach Team"
+msgstr "Sort by team"
+
+#: templates/andere.html:12 templates/andere.html.py:16
+msgid "Sortiere nach Punkten"
+msgstr "Sort by points"
+
+#: templates/andere.html:14
+msgid "Kurze Liste (mit den 10 letzten Spielen)"
+msgstr "Short list (the 10 last matches)"
+
+#: templates/andere.html:26 templates/andere.html.py:28
+msgid "Platz"
+msgstr "Place"
+
+#: templates/andere.html:26 templates/andere.html.py:28
+msgid "Name"
+msgstr "Name"
+
+#: templates/andere.html:26 templates/andere.html.py:28
+msgid "Team"
+msgstr ""
+
+#: templates/andere.html:26 templates/andere.html.py:28
+#: templates/stat_teams.html:11
+msgid "Punkte"
+msgstr "Points"
+
+#: templates/anmeldung.html:4 templates/base.html:30
+msgid "EM-Tippspiel"
+msgstr "European Championship Betting game"
+
+#: templates/anmeldung.html:4 templates/base.html:30
+msgid "WM-Tippspiel"
+msgstr "World Championship Betting game"
+
+#: templates/anmeldung.html:4
+msgid "Neuen Account anlegen"
+msgstr "Create new account"
+
+#: templates/anmeldung.html:5
+msgid "Anmeldung zum Tippspiel"
+msgstr "Registration for the betting game"
+
+#: templates/anmeldung.html:9 templates/liste.html:9
+#: templates/liste.html.py:32
+msgid "Abschicken"
+msgstr "Submit"
+
+#: templates/base.html:19
+msgid "Tipps eingeben"
+msgstr "Enter bets"
+
+#: templates/base.html:21 templates/stat_teams.html:4
+#: templates/stat_teams.html.py:5
+msgid "Rangliste der Teams"
+msgstr "Ranking of teams"
+
+#: templates/base.html:22
+msgid "Hilfe"
+msgstr "Help"
+
+#: templates/base.html:24
+msgid "Angemeldet als"
+msgstr "Logged in as"
+
+#: templates/base.html:39
+msgid "Bei Fragen/Problemen:"
+msgstr "Questions, problems?"
+
+#: templates/liste.html:4
+msgid "Liste der Spiele"
+msgstr "List of matches"
+
+#: templates/liste.html:5
+msgid "Tipps eintragen"
+msgstr "Enter bets"
+
+#: templates/liste.html:12
+msgid "Bitte Tipps eingeben"
+msgstr "Please enter your bets"
+
+#: templates/liste.html:26
+msgid "Noch keine Tippabgabe mögl."
+msgstr "No bets accepted yet"
+
+#: templates/liste.html:36
+msgid "Alte Spiele"
+msgstr "Old matches"
+
+#: templates/loginform.html:10
+msgid "Einloggen"
+msgstr "Log in"
+
+#: templates/loginform.html:11
+msgid "Password vergessen"
+msgstr "Forgot my password"
+
+#: templates/stat_teams.html:11
+msgid "Anzahl Mitspieler"
+msgstr "Number of players"
+
+#: templates/stat_teams.html:11
+msgid "Durchschnitt"
+msgstr "Average"
+
+#: templates/admin/base_site.html:4
+msgid "EM16 Tippspiel - Verwaltung"
+msgstr "European Championship 2016 betting game - administration"
+
+#
+msgid "Deutschland"
+msgstr "Germany"
+
+#
+msgid "Kroatien"
+msgstr "Croatia"
+
+#
+msgid "Irland"
+msgstr "Ireland"
+
+#
+msgid "Island"
+msgstr "Iceland"
+
+#
+msgid "Albanien"
+msgstr "Albania"
+
+#
+msgid "Nordirland"
+msgstr "Northern Ireland"
+
+#
+msgid "Schweden"
+msgstr "Sweden"
+
+#
+msgid "Portugal"
+msgstr "Portugal"
+
+#
+msgid "Ukraine"
+msgstr "Ukraine"
+
+#
+msgid "Tschechien"
+msgstr "Czech Republic"
+
+#
+msgid "Polen"
+msgstr "Poland"
+
+#
+msgid "Rumänien"
+msgstr "Romania"
+
+#
+msgid "Russland"
+msgstr "Russia"
+
+
+#
+msgid "Neuseeland"
+msgstr "New Zealand"
+
+#
+msgid "Südafrika"
+msgstr "South Africa"
+
+#
+msgid "Kamerun"
+msgstr "Cameroon"
+
+#
+msgid "Argentinien"
+msgstr "Argentina"
+
+#
+msgid "Nordkorea"
+msgstr "Korea DPR"
+
+#
+msgid "Südkorea"
+msgstr "South Korea"
+
+#
+msgid "Brasilien"
+msgstr "Brazil"
+
+#
+msgid "Griechenland"
+msgstr "Greece"
+
+#
+msgid "Schweiz"
+msgstr "Switzerland"
+
+#
+msgid "Österreich"
+msgstr "Austria"
+
+#
+msgid "Mexiko"
+msgstr "Mexico"
+
+#
+msgid "Serbien"
+msgstr "Serbia"
+
+#
+msgid "Algerien"
+msgstr "Algeria"
+
+#
+msgid "Spanien"
+msgstr "Spain"
+
+#
+msgid "Frankreich"
+msgstr "France"
+
+#
+msgid "Italien"
+msgstr "Italy"
+
+#
+msgid "Elfenbeinküste"
+msgstr "Ivory Coast"
+
+#
+msgid "Niederlande"
+msgstr "Netherlands"
+
+#
+msgid "Slowenien"
+msgstr "Slovenia"
+
+#
+msgid "Slowakei"
+msgstr "Slovakia"
+
+#
+msgid "Ungarn"
+msgstr "Hungary"
+
+#
+msgid "Türkei"
+msgstr "Turkey"
+
+
+#
+msgid "Dänemark"
+msgstr "Denmark"
+
+#
+msgid "Australien"
+msgstr "Australia"
+
+#
+msgid "Kolumbien"
+msgstr "Colombia"
+
+#
+msgid "Belgien"
+msgstr "Belgium"
+
+#
+msgid "Bosnien und Herzegowina"
+msgstr "Bosnia and Herzegovina"
+
+#
+msgid "Vorrunde, Spieltag 1"
+msgstr "Group stage, part 1"
+
+#
+msgid "Vorrunde, Spieltag 2"
+msgstr "Group stage, part 2"
+
+
+#
+msgid "Vorrunde, Spieltag 3"
+msgstr "Group stage, part 3"
+
+#
+msgid "Viertelfinale"
+msgstr "Quarterfinal"
+
+#
+msgid "Halbfinale"
+msgstr "Semi-final"
+
+#
+msgid "Finale"
+msgstr "Final"
+
+#
+msgid "Achtelfinale"
+msgstr "Round of 16"
+
+#
+msgid "Spiel um 3. Platz"
+msgstr "Third-Place play-off"
+
+
+#
+msgid "Dieser Benutzername ist schon vergeben."
+msgstr "There already is an account with this user name."
+
+
+#
+msgid "Benutzername"
+msgstr "User name"
+
+#
+msgid "Nachname"
+msgstr "Last name"
+
+#
+msgid "Vorname"
+msgstr "First name"
+
+#
+msgid "Klicke die Sterne, um Freunde zu markieren. Wenn Du Freunde markiert hast und die Seite neu lädst, erscheinst Du mit allen Freunden oben in der Liste."
+msgstr "Click the stars to mark friends. After having marked friends and reloading the page, you with your friends will be shown as the top part of the list."
+
+#
+msgid "Es wurden nicht alle Tipps abgespeichert. Trotzdem die Seite verlassen?"
+msgstr "Some bets have not been saved. Leave the page anyway?"
+

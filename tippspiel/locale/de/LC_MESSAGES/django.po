@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-04 21:29+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: settings.py:35
+msgid "Deutsch"
+msgstr ""
+
+#: settings.py:36
+msgid "English"
+msgstr ""
+
+#: allg/views.py:30
+msgid "Benutzer unbekannt"
+msgstr ""
+
+#: allg/views.py:40
+msgid "Du hast eine Email mit einem neuen Passwort bekommen."
+msgstr ""
+
+#: allg/views.py:47
+msgid "Login fehlgeschlagen."
+msgstr ""
+
+#: allg/views.py:49
+msgid "Bitte Benutzernamen und Passwort eingeben."
+msgstr ""
+
+#: allg/views.py:57
+msgid "Du bist abgemeldet worden."
+msgstr ""
+
+#: allg/views.py:99
+msgid "Anmeldung erfolgreich."
+msgstr ""
+
+#: allg/views.py:102
+msgid "Die Angaben sind nicht vollstaendig."
+msgstr ""
+
+#: templates/andere.html:4
+msgid "Alle Tips"
+msgstr ""
+
+#: templates/andere.html:5 templates/base.html:20
+msgid "Tabelle/Tipps aller Mitspieler"
+msgstr ""
+
+#: templates/andere.html:10
+msgid "Komplette Liste mit allen Spielen"
+msgstr ""
+
+#: templates/andere.html:11 templates/andere.html.py:15
+msgid "Sortiere nach Team"
+msgstr ""
+
+#: templates/andere.html:12 templates/andere.html.py:16
+msgid "Sortiere nach Punkten"
+msgstr ""
+
+#: templates/andere.html:14
+msgid "Kurze Liste (mit den 10 letzten Spielen)"
+msgstr ""
+
+#: templates/andere.html:26 templates/andere.html.py:28
+msgid "Platz"
+msgstr ""
+
+#: templates/andere.html:26 templates/andere.html.py:28
+msgid "Name"
+msgstr ""
+
+#: templates/andere.html:26 templates/andere.html.py:28
+msgid "Team"
+msgstr ""
+
+#: templates/andere.html:26 templates/andere.html.py:28
+#: templates/stat_teams.html:11
+msgid "Punkte"
+msgstr ""
+
+#: templates/anmeldung.html:4 templates/base.html:30
+msgid "WM-Tippspiel"
+msgstr ""
+
+#: templates/anmeldung.html:4
+msgid "Neuen Account anlegen"
+msgstr ""
+
+#: templates/anmeldung.html:5
+msgid "Anmeldung zum Tippspiel"
+msgstr ""
+
+#: templates/anmeldung.html:9 templates/liste.html:9
+#: templates/liste.html.py:32
+msgid "Abschicken"
+msgstr ""
+
+#: templates/base.html:19
+msgid "Tipps eingeben"
+msgstr ""
+
+#: templates/base.html:21 templates/stat_teams.html:4
+#: templates/stat_teams.html.py:5
+msgid "Rangliste der Teams"
+msgstr ""
+
+#: templates/base.html:22
+msgid "Hilfe"
+msgstr ""
+
+#: templates/base.html:24
+msgid "Angemeldet als"
+msgstr ""
+
+#: templates/base.html:39
+msgid "Bei Fragen/Problemen:"
+msgstr ""
+
+#: templates/liste.html:4
+msgid "Liste der Spiele"
+msgstr ""
+
+#: templates/liste.html:5
+msgid "Tipps eintragen"
+msgstr ""
+
+#: templates/liste.html:12
+msgid "Bitte Tipps eingeben"
+msgstr ""
+
+#: templates/liste.html:26
+msgid "Noch keine Tippabgabe mögl."
+msgstr ""
+
+#: templates/liste.html:36
+msgid "Alte Spiele"
+msgstr ""
+
+#: templates/loginform.html:10
+msgid "Einloggen"
+msgstr ""
+
+#: templates/loginform.html:11
+msgid "Password vergessen"
+msgstr ""
+
+#: templates/stat_teams.html:11
+msgid "Anzahl Mitspieler"
+msgstr ""
+
+#: templates/stat_teams.html:11
+msgid "Durchschnitt"
+msgstr ""
+
+#: templates/admin/base_site.html:4
+msgid "EM16 Tippspiel - Verwaltung"
+msgstr ""

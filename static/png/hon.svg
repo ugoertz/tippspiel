@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="1000"
+   height="500"
+   viewBox="-36 -18 72 36"
+   id="svg2">
+  <rect
+     width="72"
+     height="36"
+     x="-36"
+     y="-18"
+     id="rect31"
+     style="fill:#0073cf" />
+  <rect
+     width="72"
+     height="12"
+     x="-36"
+     y="-6"
+     id="rect4"
+     style="fill:#fff" />
+  <path
+     d="M -26.147853,3.6112004 L -32.547587,-1.0871079 L -38.92131,3.6464247 L -36.430579,-3.8919404 L -42.902025,-8.4909693 L -34.962936,-8.4516268 L -32.588786,-16.027516 L -30.17289,-8.4648355 L -22.234139,-8.5479633 L -28.680122,-3.9133125 L -26.147853,3.6112004 z"
+     transform="matrix(0.1840629,0,0,0.1838981,5.9945756,1.1384295)"
+     id="path2399"
+     style="fill:#0073cf" />
+  <use
+     transform="translate(-10,-3.190983)"
+     id="use3407"
+     xlink:href="#path2399" />
+  <use
+     transform="translate(-10,2.809017)"
+     id="use3409"
+     xlink:href="#path2399" />
+  <use
+     transform="translate(10,-3.1909829)"
+     id="use3412"
+     xlink:href="#path2399" />
+  <use
+     transform="translate(10,2.8090171)"
+     id="use3414"
+     xlink:href="#path2399" />
+</svg>

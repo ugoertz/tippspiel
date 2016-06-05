@@ -1,0 +1,4 @@
+*.pyc
+django.mo
+local_settings.py
+

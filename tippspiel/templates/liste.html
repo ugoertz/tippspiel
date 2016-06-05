@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Liste der Spiele" %}{% endblock %}
+{% block ueberschrift %}{% trans "Tipps eintragen" %}{% endblock %}
+
+{% block js %}
+<script>
+$(document).ready(function() {
+    window.unsaved_data = false;
+    $('.submitbtn').click(function() {
+        $(window).off('beforeunload');
+    });
+    $(window).on('beforeunload', function() {
+        if (window.unsaved_data) {
+            return "{% trans 'Es wurden nicht alle Tipps abgespeichert. Trotzdem die Seite verlassen?' %}";
+        }
+    });
+    $('.watch').change(function() {
+        $(this).css('background-color', 'yellow');
+        window.unsaved_data = true;
+    } );
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<form method="post" action="/">{% csrf_token %}
+    <input type="submit" class="submitbtn btn btn-default" value="{% trans "Abschicken" %}">
+
+<table style="border-collapse: separate; border-spacing: 0 5px; width:80%;">
+    <tr><td colspan="4"></td><td style="font-size:80%" colspan="3">{% trans "Bitte Tipps eingeben" %}</td></tr>
+    {% for s in spiele %}
+    {% ifchanged %}<tr><td colspan="8" style="font-size:80%" bgcolor="EEEEEE">{% trans s.runde.get_name_display %}</td></tr>{% endifchanged %}
+    <tr>
+        <td style="font-size:80%" width=120>{{ s.datum|date:"j.n., H:i"}}</td>
+        <td><img alt="" style="border:1px solid black;" border="1" src="{% get_static_prefix %}png/{{ s.mannschaft1.code }}.png"> {% trans s.mannschaft1.name %}</td>
+        <td> - </td>
+        <td><img alt="" style="border:1px solid black;" border="1" src="{% get_static_prefix %}png/{{ s.mannschaft2.code }}.png"> {% trans s.mannschaft2.name %}</td>
+        {% ifequal s.runde.freigabe 2 %}
+        <td width="80"><input id="i-{{ s.id }}t1" style="text-align: center; border-width:0; background-color:{{ s.tc }}" name="s{{ s.id }}t1" type="text" size="3" value="{{ s.tt1 }}" class="watch"></td>
+        <td> <b>:</b> </td>
+        <td><input id="i-{{ s.id }}t2" style="text-align: center; border-width:0; background-color:{{ s.tc }}" name="s{{ s.id }}t2" type="text" size="3" value="{{ s.tt2 }}" class="watch"></td>
+        {% else %}
+        <td colspan="3" style="font-size:80%" bgcolor="CCCCCC">{% trans "Noch keine Tippabgabe mögl." %}</td>
+        {% endifequal %}
+    </tr>
+    {% endfor %}
+</table>
+
+<input type="submit" value="{% trans "Abschicken" %}" class="submitbtn btn btn-default">
+</form>
+
+{% if spiele_alt %}<hr>
+<h2>{% trans "Alte Spiele" %}</h2>
+<table style="border-collapse: separate; border-spacing: 0 5px; width:700px;">
+    {% for s in spiele_alt %}
+    {% ifchanged %}<tr><td colspan="7" style="font-size:80%" bgcolor="EEEEEE">{{ s.runde.get_name }}</td></tr>{% endifchanged %}
+    <tr>
+        <td style="font-size:80%">{{ s.datum|date:"j.n." }}</td>
+        <td><img alt="" style="border:1px solid black;" src="{% get_static_prefix %}png/{{ s.mannschaft1.code }}.png"> {% trans s.mannschaft1.name %}</td>
+        <td> - </td>
+        <td><img alt="" style="border:1px solid black;" src="{% get_static_prefix %}png/{{ s.mannschaft2.code }}.png"> {% trans s.mannschaft2.name %}</td>
+        <td>{% if s.tore1|default_if_none:"-1"|add:"1" %}<b>{{ s.tore1 }} : {{ s.tore2 }}</b>{% endif %}</td>
+        <td width="10"></td><td width="50" align="center" bgcolor="{{ s.tc }}">{{ s.tt1 }} : {{ s.tt2 }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+{% endblock %}

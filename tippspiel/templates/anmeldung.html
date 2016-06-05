@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "EM-Tippspiel" %} - {% trans "Neuen Account anlegen" %} {% endblock %}
+{% block ueberschrift %}{% trans "Anmeldung zum Tippspiel" %}{% endblock %}
+{% block content %}
+<form method="POST" action="">{% csrf_token %}
+{{ form|crispy }}
+<input class="btn btn-default" type="submit" value="{% trans "Abschicken" %}">
+</form>
+
+{% endblock %}
