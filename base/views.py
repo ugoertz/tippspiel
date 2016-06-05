@@ -30,8 +30,8 @@ Liebe(r) {anrede},
 
 danke fuer Deine Anmeldung beim EM-Tippspiel.
 
-Adresse der Webseite: http://{url}
-Hilfe-Seite: http://{url}hilfe/
+Adresse der Webseite: http://{url}/
+Hilfe-Seite: http://{url}/hilfe/
 
 Dein Benutzername: {username}
 Dein Passwort: {passwd}
@@ -46,8 +46,8 @@ Dear {anrede},
 
 thanks for registering for the betting game.
 
-Web site URL: http://{url}
-Help page: http://{url}help/
+Web site URL: http://{url}/
+Help page: http://{url}/help/
 
 You user name: {username}
 Your password: {passwd}
@@ -65,8 +65,8 @@ hier ist Dein neues Passwort:
 Dein Benutzername: {username}
 Dein Passwort: {passwd}
 
-Adresse der Webseite: http://{url}
-Hilfe-Seite: http://{url}hilfe/
+Adresse der Webseite: http://{url}/
+Hilfe-Seite: http://{url}/hilfe/
 
 Viele Gruesse,
 
@@ -81,8 +81,8 @@ please find below your new password:
 You user name: {username}
 Your password: {passwd}
 
-Web site URL: http://{url}
-Help page: http://{url}help/
+Web site URL: http://{url}/
+Help page: http://{url}/help/
 
 Best,
 
