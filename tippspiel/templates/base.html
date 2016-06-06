@@ -16,18 +16,18 @@
 <body>
     <div class="container" style="font-size:120%;">
         {% if user and not user.is_anonymous %}
-        <div class="row">
-            <div class="col-md-12" style="padding:12px; border-bottom:1px solid gray; margin-top:10px;">
+        <div class="row" style="padding:12px; border-bottom:1px solid gray; margin-top:10px;">
+            <div class="col-md-12">
                 <span style="position:relative; float:right;">{% trans "Angemeldet als" %} {{ user.get_full_name }}.
                     <a class="btn btn-warning btn-sm" href="/logout/">Logout</a></span>
 
             </div>
         </div>
         {% endif %}
-        <div class="row">
-            <div class="col-md-12" style="padding:12px; border-bottom:1px solid gray; margin-top:3px; margin-bottom:10px;">
+        <div class="row" style="padding:12px; border-bottom:1px solid gray; margin-top:3px; margin-bottom:10px;">
+            <div class="col-md-12">
                 <a href="/"><span class="glyphicon glyphicon-pencil" style="margin-right: 5px;"></span>{% trans "Tipps eingeben" %}</a>
-                <a href="/stats/"><span class="glyphicon glyphicon-list" style="margin-left: 30px; margin-right: 5px;"></span>{% trans "Tabelle/Tipps aller Mitspieler" %}</a>
+                <a href="/stats/"><span class="glyphicon glyphicon-list" style="margin-left: 30px; margin-right: 5px;"></span>{% trans "Tabelle" %}</a>
                 <a href="/stat_teams/"><span class="glyphicon glyphicon-stats" style="margin-left: 30px; margin-right: 5px;"></span>{% trans "Rangliste der Teams" %}</a>
                 <a href="/hilfe/"><span class="glyphicon glyphicon-info-sign" style="margin-left: 30px; margin-right: 5px;"></span>{% trans "Hilfe" %}</a>
                 <span class="pull-right">
@@ -54,9 +54,9 @@
         </div>
         {% endif %}
         <div class="row">
-            <div class="col-md-10" style="padding:2px; font-size:180%;">{% block ueberschrift %}{% trans "EM-Tippspiel" %}{% endblock %}
+            <div class="col-md-12" style="padding:2px; font-size:180%;">{% block ueberschrift %}{% trans "EM-Tippspiel" %}{% endblock %}
+                <div class="pull-right"><img alt="" src="{% static 'png/fussball1.png' %}"></div>
             </div>
-            <div class="col-md-2"><img alt="" src="{% static 'png/fussball1.png' %}"></div>
         </div>
         <div class="row">
             <div class="col-md-12" style="padding:2px;">
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12" style="font-size:80%; background-color:#eeeeee; padding:3px">{% trans "Bei Fragen/Problemen:" %} Ulrich G&ouml;rtz (<a href="mailto:ug@geometry.de">ug@geometry.de</a>)<span style="margin-left:300;">{{ current_time }}</span>
+            <div class="col-md-12" style="font-size:80%; background-color:#eeeeee; padding:3px">{% trans "Bei Fragen/Problemen:" %} Ulrich G&ouml;rtz (<a href="mailto:ug@geometry.de">ug@geometry.de</a>)<span class="pull-right">{{ current_time }}</span>
             </div>
         </div>
     </div>

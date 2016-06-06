@@ -60,6 +60,10 @@ msgstr "All bets"
 msgid "Tabelle/Tipps aller Mitspieler"
 msgstr "Table, bets of other players"
 
+#: templates/andere.html:5 templates/base.html:20
+msgid "Tabelle"
+msgstr "Bets of others"
+
 #: templates/andere.html:10
 msgid "Komplette Liste mit allen Spielen"
 msgstr "Complete list with all matches"
