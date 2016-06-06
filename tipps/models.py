@@ -13,7 +13,7 @@ def sign(i):
 
 class Userdata(models.Model):
     user = models.OneToOneField(User)
-    team = models.CharField(max_length=3, choices=settings.TEAM_CHOICES)
+    team = models.CharField(max_length=10, choices=settings.TEAM_CHOICES)
     punkte = models.IntegerField()
     platz = models.IntegerField(default=0)
     friends = models.ManyToManyField('self', blank=True, symmetrical=False)

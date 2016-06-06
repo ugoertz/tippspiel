@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block title %}{% trans "EM-Tippspiel" %} - {% trans "Neuen Account anlegen" %} {% endblock %}
-{% block ueberschrift %}{% trans "Anmeldung zum Tippspiel" %}{% endblock %}
+{% block ueberschrift %}{% trans "Anmeldung zum Tippspiel" %} (Team {{ team }}){% endblock %}
 {% block content %}
 <form method="POST" action="">{% csrf_token %}
 {{ form|crispy }}

@@ -147,10 +147,12 @@ class CreateForm(forms.Form):
 
 
 def anmeldung(request, team):
-    teams = [x[1].lower() for x in settings.TEAM_CHOICES]
-    if not team in teams:
+    teams = {x[0]: x[1] for x in settings.TEAM_CHOICES}
+    try:
+        teamdisplay = teams[team]
+    except KeyError:
         raise Http404
-    team = {x[1].lower(): x[0] for x in settings.TEAM_CHOICES}[team]
+
     logout(request)
     if request.POST:
         form = CreateForm(request.POST)
@@ -183,8 +185,8 @@ def anmeldung(request, team):
             return HttpResponseRedirect('/')
         else:
             messages.error(request, _('Die Angaben sind nicht vollstaendig.'))
-            return rtr(request, 'anmeldung', form=form)
+            return rtr(request, 'anmeldung', form=form, team=teamdisplay)
     else:
-        return rtr(request, 'anmeldung', form=CreateForm())
+        return rtr(request, 'anmeldung', form=CreateForm(), team=teamdisplay)
 
 
