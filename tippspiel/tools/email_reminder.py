@@ -64,7 +64,7 @@ for u in users:
                         missing_bets=',\n'.join(fehlende_tipps),
                         url=Site.objects.get_current().domain),
                     'ug@geometry.de',
-                    ['u@g0ertz.de'], #  FIXME [u.user.email],
+                    [u.user.email],
                     fail_silently=False
                     )
             success.append(u.user.get_full_name() + ' ' + u.user.email)
