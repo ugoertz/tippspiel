@@ -96,14 +96,14 @@ def stats(request, sortby=None, limit=None):
         if s.tippbar(): continue
         slist.append(s)
     if sortby == 'byteam':
-        ulist = list(Userdata.objects.filter(team=ud.team).order_by('-punkte'))
-        ulist.extend(list(Userdata.objects.exclude(team=ud.team).order_by('team', '-punkte')))
+        ulist = list(Userdata.objects.filter(team=ud.team).order_by('platz'))
+        ulist.extend(list(Userdata.objects.exclude(team=ud.team).order_by('team', 'platz')))
     else:
         if ud.friends.count() > 1: # always a friend to oneself
-            ulist = list(ud.friends.all().order_by('-punkte'))
-            ulist.extend(list(Userdata.objects.exclude(id__in=ud.friends.all()).order_by('-punkte')))
+            ulist = list(ud.friends.all().order_by('platz'))
+            ulist.extend(list(Userdata.objects.exclude(id__in=ud.friends.all()).order_by('platz')))
         else:
-            ulist = list(Userdata.objects.all().order_by('-punkte'))
+            ulist = list(Userdata.objects.all().order_by('platz'))
     punkte = -1
     for u in ulist:
         if u.punkte != punkte:
