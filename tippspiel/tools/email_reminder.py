@@ -35,7 +35,7 @@ we still miss your bet on the outcome of the following matches:
 
 {missing_bets}.
 
-You can enter your bets until one hour befor the match starts at
+You can enter your bets until one hour before the match starts at
 {url}
 
 Best regards,
