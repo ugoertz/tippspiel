@@ -104,11 +104,16 @@ def stats(request, sortby=None, limit=None):
             ulist.extend(list(Userdata.objects.exclude(id__in=ud.friends.all()).order_by('platz')))
         else:
             ulist = list(Userdata.objects.all().order_by('platz'))
-    punkte = -1
-    for u in ulist:
-        if u.punkte != punkte:
-            u.punkte_verschieden = 1
-        punkte = u.punkte
+    team_offset = 0
+    team = ''
+    for ctr, u in enumerate(ulist):
+        if sortby == 'byteam':
+            if u.team != team:
+                # at this point in ulist new team starts
+                team = u.team
+                team_offset = ctr
+        u.team_pl = ctr + 1 - team_offset
+
         u.li = []
         for s in slist:
             tipps = Tipp.objects.filter(user=u.user, spiel=s.id)

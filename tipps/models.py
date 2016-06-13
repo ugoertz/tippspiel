@@ -109,8 +109,14 @@ class Spiel(models.Model):
                                   Tipp.ERGEBNIS: 7 }[t.punkte] * t.spiel.runde.faktor
             u.save()
         ulist = Userdata.objects.all().order_by('-punkte')
+
+        vorheriger_platz, punkte_vorheriger_platz = 0, 1000
         for ctr, u in enumerate(ulist):
-            u.platz = ctr+1
+            if u.punkte == punkte_vorheriger_platz:
+                u.platz = vorheriger_platz
+            else:
+                u.platz = ctr + 1
+                vorheriger_platz, punkte_vorheriger_platz = u.platz, u.punkte
             u.save()
 
 

@@ -46,7 +46,7 @@
 
     {% for u in users %}
     <tr bgcolor="{% ifequal ud.user.username u.user.username %}#AAFFAA{% else %}{% cycle #EEEEEE,#FFFFFF %}{% endifequal %}">
-        <td>{% if u.punkte_verschieden %}{% if zeige_plaetze %}{{ u.platz }}{% else %}{{ forloop.counter }}{% endif %}.{% endif %}</td>
+        <td>{% ifchanged u.punkte %}{% if zeige_plaetze %}{{ u.platz }}{% else %}{{ u.team_pl }}{% endif %}.{% endifchanged %}</td>
         <td nowrap>{% if ud.user.username == u.user.username %}<img style="margin-right:10px;" src="{% static 'png/star.png' %}">{% else %}{% if u in ud.friends.all %}<img id="i{{ u.id }}" style="cursor:pointer; margin-right:10px;" src="{% static 'png/star.png' %}">{% else %}<img id="i{{ u.id }}" style="margin-right:10px; cursor:pointer;" src="{% static 'png/star_gray.png' %}">{% endif %}{% endif %}
         {{ u.user.get_full_name }}</td><td>{{ u.get_team_display }}</td><td align="center">{{ u.punkte }}</td><td bgcolor="#FFFFFF" width="10"></td>
         {% for t in u.li %}<td align="center" bgcolor="#{{ t.1 }}">{{ t.0 }}</td>{% endfor %}
